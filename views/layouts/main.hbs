@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <head>
+        <title>COMP 4711 Lab 5 - A01031961, Tomson Tai</title>
+        <!-- References a Handlebars partial in views/partials/head.handlebars -->
+        {{>head}}
+        
+    </head>
+    
+    <body>
+
+
+
+
+    <!-- lab 4 due Oct 8th, next Tuesday at 11:59 pm -->
+
+    <div>
+        <form id="searchFormId" action = "/artists/search" method = "POST">
+            <p class="formTitle">Artist Directory</p>
+            <br>
+            <input type="text" name="name" class="aFormName" id="name"  > 
+            <a href="/artist/add" class="btn" >Add Artist</a>
+            {{!-- <a href="/artist/search">Search</a> --}}
+            <input type="submit" class="searchArtistClassButton btn" value="Search">
+        </form>
+    </div>
+
+    {{artists}}
+{{!--     <div id="inputForm">
+        <form id="inputFormId" action = "/artists/add" method = "POST">
+            <input maxlength="40" type="text" placeholder="Artist Name" name="inputArtistName" id="inputArtistText" value='Josh' /> <br>
+            <input maxlength="40" type="text" placeholder="About artist" name="inputAbout" id="inputAboutText" value='Best of the season' />  <br>
+            <input type="text" placeholder="Image url" name="inputURL" id="inputURLText" value='https://randomuser.me/api/portraits/med/men/65.jpg' /><br>
+            <!-- <input type="button" onclick="add_Artist_Form(); addToDatabase(); showInfo()" value="Add" > -->
+            <button class="btn" type="submit">Add</button>
+        </form>
+    </div>
+
+    
+    <div id="baseDiv">
+        <ul id="ulElement">
+            
+        </ul>
+    </div> 
+ --}}
+    {{{ body }}}
+
+{{!-- {{#each artist}}
+<div class="artists">
+    <div class="artistImage">
+        <img src="{{this.imageURL}}">
+    </div>
+    <div class="artistInfo">
+        <div class="artistTitle">
+            {{this.name}}
+        </div>
+        <div class="artistDesc">
+            {{this.about}}
+        </div>
+    </div>
+</div>
+{{/each}} --}}
+
+    {{!-- {{>footer}} --}}
+    
+</body>
+</html>
